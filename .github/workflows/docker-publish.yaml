@@ -23,4 +23,4 @@ jobs:
             context: .
             file: ./Dockerfile
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/mongodb-s3-backup:${{ github.ref }}
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/mongodb-s3-backup:${{ github.ref_name }}
