@@ -13,4 +13,4 @@ mongodump --username=${MONGODB_ROOT_USER} \
           --gzip \
           --archive=./${DUMP_NAME}
 
-aws s3 cp ./${DUMP_NAME} s3://${S3_ENDPOINT}/${S3_BUCKET_NAME}
+aws --endpoint-url ${S3_ENDPOINT} s3 cp ./${DUMP_NAME} s3://${S3_BUCKET_NAME}
